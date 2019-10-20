@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [MyGP Pack Purchase]">
+  <listeners>
+    <listener class-name="Resources.ListenersNG"/>
+  </listeners>
+  <test thread-count="5" name="Data Pack(failed)">
+    <parameter name="Systemport" value="8223"/>
+    <parameter name="platformVersion" value="6"/>
+    <parameter name="URL_" value="127.0.0.1:5001/wd/hub"/>
+    <parameter name="deviceName" value="Symphony"/>
+    <parameter name="UDID" value="0123456789ABCDEF"/>
+    <classes>
+      <class name="Test.PackPurchase">
+        <methods>
+          <include name="VOICE23Minutes" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Test.PackPurchase -->
+    </classes>
+  </test> <!-- Data Pack(failed) -->
+</suite> <!-- Failed suite [MyGP Pack Purchase] -->

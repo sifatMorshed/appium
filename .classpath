@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_212"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/animal-sniffer-annotations-1.17.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/ant-1.9.6.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/ant-launcher-1.9.6.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/appium-3.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/asm-6.0.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/aspectjweaver-1.9.1.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/auto-value-annotations-1.6.2.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/bsh-2.0b6.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/byte-buddy-1.8.15.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/cglib-3.2.6.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/checker-compat-qual-2.5.3.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/checker-qual-2.5.3.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/commons-beanutils-1.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/commons-collections-3.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/commons-digester-1.8.1.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/commons-io-2.6.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/commons-lang3-3.8.1.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/commons-text-1.6.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/commons-validator-1.6.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/configs-1.7.0.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/diffutils-1.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/error_prone_annotations-2.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/error-1.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/failureaccess-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/gson-2.8.4.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/guava-27.0-jre.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/httpclient-4.5.5.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/httpcore-4.4.9.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/j2objc-annotations-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/java-client-6.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/jcommander-1.72.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/jsr305-3.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/listeners-1.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/log4j-api-2.11.1.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/log4j-core-2.11.1.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/logger-1.7.0.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/okhttp-3.11.0.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/okio-1.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/opencv-3.2.0-1.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/selenium-api-3.141.5.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/selenium-chrome-driver-3.141.5.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/selenium-edge-driver-3.141.5.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/selenium-firefox-driver-3.141.5.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/selenium-ie-driver-3.141.5.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/selenium-java-3.141.5.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/selenium-opera-driver-3.141.5.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/selenium-remote-driver-3.141.5.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/selenium-safari-driver-3.141.5.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/selenium-support-3.141.5.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/snakeyaml-1.23.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/spring-aop-5.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/spring-beans-5.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/spring-context-5.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/spring-core-5.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/spring-expression-5.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/spring-jcl-5.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/testng-6.14.3.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/truth-0.42.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/JSON/json-20180813.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/http jar/httpcomponents-client-4.5.9/lib/commons-codec-1.11.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/http jar/httpcomponents-client-4.5.9/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/http jar/httpcomponents-client-4.5.9/lib/fluent-hc-4.5.9.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/http jar/httpcomponents-client-4.5.9/lib/httpclient-4.5.9.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/http jar/httpcomponents-client-4.5.9/lib/httpclient-cache-4.5.9.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/http jar/httpcomponents-client-4.5.9/lib/httpclient-osgi-4.5.9.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/http jar/httpcomponents-client-4.5.9/lib/httpclient-win-4.5.9.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/http jar/httpcomponents-client-4.5.9/lib/httpcore-4.4.11.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/http jar/httpcomponents-client-4.5.9/lib/httpmime-4.5.9.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/Extentreport/extentreports-4.0.9.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/Extentreport/extentreports-4.0.9/dependency/bsh-2.0b4.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/Extentreport/extentreports-4.0.9/dependency/bson-3.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/Extentreport/extentreports-4.0.9/dependency/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/Extentreport/extentreports-4.0.9/dependency/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/Extentreport/extentreports-4.0.9/dependency/freemarker-2.3.23.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/Extentreport/extentreports-4.0.9/dependency/httpmime-4.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/Extentreport/extentreports-4.0.9/dependency/jcommander-1.48.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/Extentreport/extentreports-4.0.9/dependency/mongodb-driver-3.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/Extentreport/extentreports-4.0.9/dependency/mongodb-driver-core-3.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/android-4.1.1.4.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/commons-codec-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/httpclient-4.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/httpcore-4.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/json-20080701.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/opengl-api-gl1.1-android-2.1_r1.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/xmlParserAPIs-2.6.2.jar"/>
+	<classpathentry kind="lib" path="C:/App Testing/Appium JAR/xpp3-1.1.4c.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

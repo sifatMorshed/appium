@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Reporting]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="Test.Logout">
+        <methods>
+          <include name="GuestmodeAppbackroundflexiplan"/>
+          <include name="GuestmodeAppforegroundflexiplan"/>
+          <include name="Appbackgroundflexiplan"/>
+          <include name="Appforegroundflexiplan"/>
+        </methods>
+      </class> <!-- Test.Logout -->
+      <class name="Test.Login">
+        <methods>
+          <include name="Appforegroundflexiplan"/>
+          <include name="Appbackgroundflexiplan"/>
+          <include name="Appclosedflexiplan"/>
+        </methods>
+      </class> <!-- Test.Login -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Reporting] -->

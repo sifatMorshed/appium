@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MyGP Pack Purchase">
+
+<!-- parallel ="tests" thread-count="2"  // 9814b3f8, B65AX029511D0011645, 0123456789ABCDEF, 5203260cfc03930f 
+
+    <parameter name="Systemport" value="8222"/>
+	<parameter name="deviceName" value="Oneplus"/>
+	<parameter name="platformVersion" value="9"/>
+	<parameter name="UDID" value="9814b3f8"/>
+	<parameter name="URL_" value="127.0.0.1:5000/wd/hub"/>
+	
+	<parameter name="Systemport" value="8223"/>
+	<parameter name="deviceName" value="Symphony"/>
+	<parameter name="platformVersion" value="6"/>
+	<parameter name="UDID" value="0123456789ABCDEF"/>
+	<parameter name="URL_" value="127.0.0.1:5001/wd/hub"/>
+	
+	<parameter name="Systemport" value="8224"/>
+	<parameter name="deviceName" value="Samsung"/>
+	<parameter name="platformVersion" value="8.1"/>
+	<parameter name="UDID" value="5203260cfc03930f"/>
+	<parameter name="URL_" value="127.0.0.1:5002/wd/hub"/>
+	
+	<parameter name="Systemport" value="8221"/>
+	<parameter name="deviceName" value="R40"/>
+	<parameter name="platformVersion" value="9"/>
+	<parameter name="UDID" value="B65AX029511D0011645"/>
+	<parameter name="URL_" value="127.0.0.1:5001/wd/hub"/>
+
+-->
+
+<listeners>
+<listener class-name="Resources.ListenersNG"/> 
+  <!-- <listener class-name="Resources.ExtentReportListener"/> -->
+  
+</listeners>
+
+<test name="Data Pack">
+ 
+   <parameter name="Systemport" value="8223"/>
+	<parameter name="deviceName" value="Symphony"/>
+	<parameter name="platformVersion" value="6"/>
+	<parameter name="UDID" value="0123456789ABCDEF"/>
+	<parameter name="URL_" value="127.0.0.1:5001/wd/hub"/>
+   <classes>
+       <class name="Test.PackPurchase">
+       
+        <methods>
+        <exclude name="DATA5MB" />
+        <include name="VOICE23Minutes" />
+      </methods>
+      
+       </class>
+    </classes>
+  </test>
+  
+</suite> <!-- Suite -->

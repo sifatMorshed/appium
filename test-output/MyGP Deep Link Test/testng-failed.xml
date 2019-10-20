@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [MyGP Deep Link Test]">
+  <listeners>
+    <listener class-name="Resources.ListenersNG"/>
+    <listener class-name="Resources.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="5" name="Flexiplan Gifting(failed)">
+    <parameter name="MyGPDeeplink" value="mygp://pack/flexiplan-gift"/>
+    <classes>
+      <class name="Test.Login4">
+        <methods>
+          <include name="App_Closed_FlexiplanGift" invocation-numbers="0"/>
+          <include name="abc"/>
+          <include name="App_Background_FlexiplanGift" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Test.Login4 -->
+    </classes>
+  </test> <!-- Flexiplan Gifting(failed) -->
+</suite> <!-- Failed suite [MyGP Deep Link Test] -->

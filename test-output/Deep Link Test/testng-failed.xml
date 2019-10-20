@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Deep Link Test]">
+  <listeners>
+    <listener class-name="Resources.ListenersNG"/>
+    <listener class-name="Resources.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="Flexiplan(failed)">
+    <parameter name="MyGPDeeplink" value="mygp://flexiplan"/>
+    <classes>
+      <class name="Test.LogoutAndGuestmode">
+        <methods>
+          <include name="AppClosedFlexiplan" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Test.LogoutAndGuestmode -->
+    </classes>
+  </test> <!-- Flexiplan(failed) -->
+</suite> <!-- Failed suite [Deep Link Test] -->
