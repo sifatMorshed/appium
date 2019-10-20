@@ -1,2 +1,2 @@
 # appium
-A Full JAVA based Appium Android App automation project where lots of interesting features of Appium is used!
+A Full JAVA based Android App automation project by Appium where lots of interesting features of Appium are used!
