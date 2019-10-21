@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-MyGP_Pack_Purchase">
-              <span class="suite-name border-passed">MyGP Pack Purchase</span>
+              <span class="suite-name border-failed">MyGP Pack Purchase</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-MyGP_Pack_Purchase" class="hide-methods passed suite-MyGP_Pack_Purchase"> (hide)</a> <!-- hide-methods passed suite-MyGP_Pack_Purchase -->
-                      <a href="#" panel-name="suite-MyGP_Pack_Purchase" class="show-methods passed suite-MyGP_Pack_Purchase"> (show)</a> <!-- show-methods passed suite-MyGP_Pack_Purchase -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-MyGP_Pack_Purchase" class="hide-methods failed suite-MyGP_Pack_Purchase"> (hide)</a> <!-- hide-methods failed suite-MyGP_Pack_Purchase -->
+                      <a href="#" panel-name="suite-MyGP_Pack_Purchase" class="show-methods failed suite-MyGP_Pack_Purchase"> (show)</a> <!-- show-methods failed suite-MyGP_Pack_Purchase -->
                     </span>
-                    <div class="method-list-content passed suite-MyGP_Pack_Purchase">
+                    <div class="method-list-content failed suite-MyGP_Pack_Purchase">
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-MyGP_Pack_Purchase" title="Test.PackPurchase" hash-for-method="VOICE23Minutes(8223, Symphony, 6, 0123456789ABCDEF, 127.0.0.1:5001/wd/hub)">VOICE23Minutes(8223, Symphony, 6, 0123456789ABCDEF, 127.0.0.1:5001/wd/hub)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-MyGP_Pack_Purchase -->
+                    </div> <!-- method-list-content failed suite-MyGP_Pack_Purchase -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,9 +117,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-MyGP_Pack_Purchase" class="panel MyGP_Pack_Purchase">
-          <div class="suite-MyGP_Pack_Purchase-class-passed">
+          <div class="suite-MyGP_Pack_Purchase-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">Test.PackPurchase</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -129,10 +129,55 @@
                   </a> <!-- VOICE23Minutes(8223, Symphony, 6, 0123456789ABCDEF, 127.0.0.1:5001/wd/hub) -->
                   <span class="method-name">VOICE23Minutes</span>
                   <span class="parameters">(8223, Symphony, 6, 0123456789ABCDEF, 127.0.0.1:5001/wd/hub)</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: It is impossible to create a new session because &apos;createSession&apos; which takes HttpClient, InputStream and long was not found or it is not accessible
+Build info: version: &apos;3.141.5&apos;, revision: &apos;d54ebd709a&apos;, time: &apos;2018-11-06T11:42:16&apos;
+System info: host: &apos;GP-PC-5005214&apos;, ip: &apos;192.168.0.101&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_212&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:195)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:209)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:231)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:38)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:84)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:94)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:93)
+	at Test.BaseTestNG.Capabilities(BaseTestNG.java:42)
+	at Test.PackPurchase.VOICE23Minutes(PackPurchase.java:948)
+	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:185)
+	... 39 more
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device.
+Build info: version: &apos;3.141.5&apos;, revision: &apos;d54ebd709a&apos;, time: &apos;2018-11-06T11:42:16&apos;
+System info: host: &apos;GP-PC-5005214&apos;, ip: &apos;192.168.0.101&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_212&apos;
+Driver info: driver.version: AndroidDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device.
+    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:826:9)
+    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:447:37)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:125)
+	... 44 more
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-MyGP_Pack_Purchase-class-passed -->
+          </div> <!-- suite-MyGP_Pack_Purchase-class-failed -->
         </div> <!-- panel MyGP_Pack_Purchase -->
         <div panel-name="test-xml-MyGP_Pack_Purchase" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -156,7 +201,34 @@
       &lt;class name=&quot;Test.PackPurchase&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;VOICE23Minutes&quot;/&gt;
+          &lt;exclude name=&quot;DATAEmergency30MB&quot;/&gt;
+          &lt;exclude name=&quot;DATA350MB35MBBonus&quot;/&gt;
+          &lt;exclude name=&quot;DATA1GB103MBBonus&quot;/&gt;
+          &lt;exclude name=&quot;DATA6GB615BBonus&quot;/&gt;
+          &lt;exclude name=&quot;DATA3GB308MBBonus&quot;/&gt;
+          &lt;exclude name=&quot;DATA1and5GB154MBBonus&quot;/&gt;
+          &lt;exclude name=&quot;DATA2GB205MBBonus&quot;/&gt;
+          &lt;exclude name=&quot;DATA1GB103MBBonus189Tk&quot;/&gt;
+          &lt;exclude name=&quot;DATA3GB308MBBonus289Tk&quot;/&gt;
+          &lt;exclude name=&quot;DATA5GB512MBBonus&quot;/&gt;
+          &lt;exclude name=&quot;DATA10GB1GBBonus&quot;/&gt;
+          &lt;exclude name=&quot;DATA3GB&quot;/&gt;
+          &lt;exclude name=&quot;DATA500SMS&quot;/&gt;
+          &lt;exclude name=&quot;DATA500SMB&quot;/&gt;
+          &lt;exclude name=&quot;DATA5GBBioscopePack&quot;/&gt;
+          &lt;exclude name=&quot;DATA2GBBioscopePack&quot;/&gt;
+          &lt;exclude name=&quot;DATA200SMS&quot;/&gt;
+          &lt;exclude name=&quot;DATA1GBBioscopePack&quot;/&gt;
           &lt;exclude name=&quot;DATA5MB&quot;/&gt;
+          &lt;exclude name=&quot;DATA115MB&quot;/&gt;
+          &lt;exclude name=&quot;DATA30MBBioscopePrimePass&quot;/&gt;
+          &lt;exclude name=&quot;DATA26MBFacebookPack&quot;/&gt;
+          &lt;exclude name=&quot;DATA26MBWhatsAppPack&quot;/&gt;
+          &lt;exclude name=&quot;DATA15GBBecomeaSilverSTAR&quot;/&gt;
+          &lt;exclude name=&quot;DATA46MBVideoPack&quot;/&gt;
+          &lt;exclude name=&quot;DATA86MBFacebookPack&quot;/&gt;
+          &lt;exclude name=&quot;DATA340MBFacebookPack&quot;/&gt;
+          &lt;exclude name=&quot;DATA30GBBecomeaSilverSTAR&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- Test.PackPurchase --&gt;
     &lt;/classes&gt;
@@ -202,7 +274,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'VOICE23Minutes')
 data.setCell(0, 2, 'Test.PackPurchase')
-data.setCell(0, 3, 108931);
+data.setCell(0, 3, 103536);
 window.suiteTableData['MyGP_Pack_Purchase']= { tableData: data, tableDiv: 'times-div-MyGP_Pack_Purchase'}
 return data;
 }
@@ -324,6 +396,8 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">Test.PackPurchase</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">VOICE23Minutes(8223, Symphony, 6, 0123456789ABCDEF, 127.0.0.1:5001/wd/hub)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
