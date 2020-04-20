@@ -6,7 +6,7 @@
 
     <parameter name="Systemport" value="8222"/>
 	<parameter name="deviceName" value="Oneplus"/>
-	<parameter name="platformVersion" value="9"/>
+	<parameter name="platformVersion" value="10"/>
 	<parameter name="UDID" value="9814b3f8"/>
 	<parameter name="URL_" value="127.0.0.1:5000/wd/hub"/>
 	
@@ -27,69 +27,75 @@
 	<parameter name="platformVersion" value="9"/>
 	<parameter name="UDID" value="B65AX029511D0011645"/>
 	<parameter name="URL_" value="127.0.0.1:5001/wd/hub"/>
+	
+	<parameter name="Systemport" value="8223"/>
+	<parameter name="deviceName" value="Symphony"/>
+	<parameter name="platformVersion" value="6.0.1"/>
+	<parameter name="UDID" value="42000daa4f4b1400"/>
+	<parameter name="URL_" value="127.0.0.1:5001/wd/hub"/>
 
 -->
 
 <listeners>
 <listener class-name="Resources.ListenersNG"/> 
-  <!-- <listener class-name="Resources.ExtentReportListener"/> -->
+   <listener class-name="Resources.ExtentReportListener"/>
   
 </listeners>
 
 <test name="Data Pack">
  
-   <parameter name="Systemport" value="8223"/>
-	<parameter name="deviceName" value="Symphony"/>
-	<parameter name="platformVersion" value="6"/>
-	<parameter name="UDID" value="0123456789ABCDEF"/>
-	<parameter name="URL_" value="127.0.0.1:5001/wd/hub"/>
+   <parameter name="Systemport" value="8227"/>
+	<parameter name="deviceName" value="xaomi"/>
+	<parameter name="platformVersion" value="8.1"/>
+	<parameter name="UDID" value="b313c4"/>
+	<parameter name="URL_" value="127.0.0.1:5002/wd/hub"/>
+	
    <classes>
        <class name="Test.PackPurchase">
        
         <methods>
         <include name="DATAEmergency30MB" />
-        <include name="DATA350MB35MBBonus" />
-        <include name="DATA1GB103MBBonus" />
-        <include name="DATA6GB615BBonus" />
-        <include name="DATA3GB308MBBonus" />
-        <include name="DATA1and5GB154MBBonus" />
-        <include name="DATA2GB205MBBonus" />
-        <include name="DATA1GB103MBBonus189Tk" />
-        <include name="DATA3GB308MBBonus289Tk" />
-        <include name="DATA5GB512MBBonus" />
-        <include name="DATA10GB1GBBonus" />
-        <include name="DATA3GB" />
-        <include name="DATA500SMS" />
-        <include name="DATA500SMB" />
-        <include name="DATA5GBBioscopePack" />
-        <include name="DATA2GBBioscopePack" />
-        <include name="DATA200SMS" />
-        <include name="DATA1GBBioscopePack" />
-        <include name="DATA5MB" />
-        <include name="DATA115MB" />
-        <include name="DATA30MBBioscopePrimePass" />
-        <include name="DATA26MBFacebookPack" />
-        <include name="DATA26MBWhatsAppPack" />
-        <include name="DATA15GBBecomeaSilverSTAR" />
-        <include name="DATA46MBVideoPack" />
-        <include name="DATA86MBFacebookPack" />
-        <include name="VOICE40Minutes" />
-        <include name="VOICE400Minutes" />
-        <include name="VOICE500Minutes" />
-        <include name="VOICE10Minutes" />
-        <include name="VOICE330Minutes" />
-        <include name="VOICE23Minutes" />
-        <include name="VOICE160Minutes" />
-        <include name="VOICE90Minutes50SMS" />
-        <include name="VOICE125Minutes" />
-        <include name="VOICE200Minutes" />
-        <include name="VOICE40Minutes" />
-        <include name="VOICE400Minutes" />
-        <include name="VOICE70Minutes" />
-        <include name="VOICE45MinutesPrepaidOnly" />
-        <include name="VOICE250Minutes" />
-        <include name="VOICE50Minutes" />
-        <include name="VOICE300Minutes" />
+        <exclude name="DATA350MB35MBBonus" />
+        <exclude name="DATA1GB103MBBonus" />
+        <exclude name="DATA6GB615BBonus" />
+        <exclude name="DATA3GB308MBBonus" />
+        <exclude name="DATA1and5GB154MBBonus" />
+        <exclude name="DATA2GB205MBBonus" />
+        <exclude name="DATA1GB103MBBonus189Tk" />
+        <exclude name="DATA3GB308MBBonus289Tk" />
+        <exclude name="DATA5GB512MBBonus" />
+        <exclude name="DATA10GB1GBBonus" />
+        <exclude name="DATA3GB" />
+        <exclude name="DATA500SMS" />
+        <exclude name="DATA555MB" />
+        <exclude name="DATA85MB" />
+        <exclude name="DATA5GBBioscopePack" />
+        <exclude name="DATA2GBBioscopePack" />
+        <exclude name="DATA200SMS" />
+        <exclude name="DATA1GBBioscopePack" />
+        <exclude name="DATA5MB" />
+        <exclude name="DATA115MB" />
+        <exclude name="DATA30MBBioscopePrimePass" />
+        <exclude name="DATA26MBFacebookPack" />
+        <exclude name="DATA26MBWhatsAppPack" />
+        <exclude name="DATA15GBBecomeaSilverSTAR" />
+        <exclude name="DATA46MBVideoPack" />
+        <exclude name="DATA86MBFacebookPack" />
+        <exclude name="VOICE500Minutes" />
+        <exclude name="VOICE10Minutes" />
+        <exclude name="VOICE330Minutes" />
+        <exclude name="VOICE23Minutes" />
+        <exclude name="VOICE160Minutes" />
+        <exclude name="VOICE90Minutes50SMS" />
+        <exclude name="VOICE125Minutes" />
+        <exclude name="VOICE200Minutes" />
+        <exclude name="VOICE40Minutes" />
+        <exclude name="VOICE400Minutes" />
+        <exclude name="VOICE70Minutes" />
+        <exclude name="VOICE45MinutesPrepaidOnly" />
+        <exclude name="VOICE250Minutes" />
+        <exclude name="VOICE50Minutes" />
+        <exclude name="VOICE300Minutes" />
       </methods>
       
        </class>

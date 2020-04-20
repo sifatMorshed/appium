@@ -3,17 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [MyGP Pack Purchase]">
   <listeners>
     <listener class-name="Resources.ListenersNG"/>
+    <listener class-name="Resources.ExtentReportListener"/>
   </listeners>
   <test thread-count="5" name="Data Pack(failed)">
-    <parameter name="Systemport" value="8223"/>
-    <parameter name="platformVersion" value="6"/>
-    <parameter name="URL_" value="127.0.0.1:5001/wd/hub"/>
-    <parameter name="deviceName" value="Symphony"/>
-    <parameter name="UDID" value="0123456789ABCDEF"/>
+    <parameter name="Systemport" value="8227"/>
+    <parameter name="platformVersion" value="8.1"/>
+    <parameter name="URL_" value="127.0.0.1:5002/wd/hub"/>
+    <parameter name="deviceName" value="xaomi"/>
+    <parameter name="UDID" value="b313c4"/>
     <classes>
       <class name="Test.PackPurchase">
         <methods>
-          <include name="VOICE23Minutes" invocation-numbers="0"/>
+          <include name="DATAEmergency30MB" invocation-numbers="0"/>
         </methods>
       </class> <!-- Test.PackPurchase -->
     </classes>

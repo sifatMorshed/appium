@@ -16,11 +16,13 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
+import com.opencsv.CSVWriter;
 
 import Resources.ExtentReporterNG;
 import android.animation.ObjectAnimator;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
@@ -28,6 +30,7 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.temporal.TemporalAmount;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -73,7 +76,7 @@ public class AllPackCommonActivity extends BaseTestNG {
 
 		public void takeReportedScreenshot(AndroidDriver<AndroidElement> driver, String methodName) throws MalformedURLException, InterruptedException, Exception, NoSuchElementException{
 
-		    Thread.sleep(2000);
+		    Thread.sleep(3000);
 		      
 		    File scrfile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);	
 		    FileUtil.copyFile(scrfile, new File(System.getProperty("user.dir")+"/TestsScreenshots/"+ methodName + ".png"));
@@ -83,7 +86,7 @@ public class AllPackCommonActivity extends BaseTestNG {
 		
 		public void takeGeneralScreenshot(AndroidDriver<AndroidElement> driver, String[] Location, int n) throws MalformedURLException, InterruptedException, Exception, NoSuchElementException{
 
-		    Thread.sleep(2000);
+		    Thread.sleep(3000);
 		      
 		    File scrfile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);	
 		    FileUtil.copyFile(scrfile, new File(Location[n]));
@@ -93,7 +96,13 @@ public class AllPackCommonActivity extends BaseTestNG {
 		
 	    public void Login(AndroidDriver<AndroidElement> driver, String[] MSISDN, int n) throws InterruptedException, NoSuchElementException {
 		    	
-	    	   driver.findElementByXPath("//android.widget.TextView[@text='Login']").click();
+	    	   //driver.findElementByXPath("//android.widget.TextView[@text='Login']").click();
+	    	   
+	    	   driver.findElementById("com.portonics.mygp:id/btnGpID").click();
+		    	
+	    	   Thread.sleep(3000);
+	    	   
+	    	   driver.findElements(By.className("android.widget.Button")).get(1).click();
 
 	       try { 
 	    		   
@@ -144,8 +153,10 @@ public class AllPackCommonActivity extends BaseTestNG {
 	       }
 	       
 	    public void LogOutActivity(AndroidDriver<AndroidElement> driver) throws InterruptedException {	
-	    	driver.findElementByAccessibilityId("More").click();
-			driver.findElementByXPath("//android.widget.TextView[@text='Log out']").click();
+	    	driver.findElementByXPath("//android.widget.TextView[@text='More']").click();
+	    	driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).setSwipeDeadZonePercentage(0.3).scrollIntoView(new UiSelector().text(\"Sign Out\"));").click();
+//	    	driver.findElementByAccessibilityId("More").click();
+//			driver.findElementByXPath("//android.widget.TextView[@text='Log out']").click();
 			Thread.sleep(2000);
 	    }
 	    
@@ -170,7 +181,7 @@ public class AllPackCommonActivity extends BaseTestNG {
 		
 	    public void scrollDownForData (AndroidDriver<AndroidElement> driver, String[][] InternetPacks, int i, int j) throws MalformedURLException, InterruptedException  {
 
-	   driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).setSwipeDeadZonePercentage(0.3).scrollIntoView(new UiSelector().text(\""+InternetPacks[i][0]+"\"));").click();
+	   driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).setSwipeDeadZonePercentage(0.35).scrollIntoView(new UiSelector().text(\""+InternetPacks[i][0]+"\"));").click();
 	    }
 
 	    
@@ -201,10 +212,15 @@ public class AllPackCommonActivity extends BaseTestNG {
 	          }
 	         
 			  else {
-				  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.TextView[@text='GP Internet']")));
-				  String SMSAfterPurchase= driver.findElementById("android:id/message_text").getText();
+//				  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.TextView[@text='GP Internet']")));
+//				  String SMSAfterPurchase= driver.findElementById("android:id/message_text").getText();
 				  
-				  driver.findElementById("android:id/message_text").click();
+				  wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("android:id/title")));
+		    	  String SMSAfterPurchase= driver.findElementById("android:id/big_text").getText();
+				  
+				 // driver.findElementById("android:id/message_text").click();
+		    	  driver.findElementById("android:id/big_text").click();
+		    	  
 
 //				  Thread.sleep(3000);
 //		          driver.navigate().back();
@@ -212,5 +228,6 @@ public class AllPackCommonActivity extends BaseTestNG {
 				  return SMSAfterPurchase;
 			  }
 	  }
+	    
 }
 		

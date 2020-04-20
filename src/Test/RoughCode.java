@@ -385,3 +385,145 @@ public class RoughCode extends BaseTestNG {
 //		 }
 		 
 //}
+
+
+
+
+
+//while (Data_VolumeMatcher.find()) 
+//{
+//   // System.out.println("Data Volume: "+Data_VolumeMatcher.group());
+//   
+//        //String[] data1 = { Data_VolumeMatcher.group()}; 
+//        RawData.add(new String("Data Volume: "+Data_VolumeMatcher.group()));
+//       // System.out.println(RawData);
+//    }
+//
+//while (PriceMatcher.find()) 
+//{
+//    
+//        RawData.add(new String("Price: "+PriceMatcher.group()));
+//       
+//        System.out.println(RawData);
+//    }
+
+//File src = new File("C:\\Users\\sifat.m.morshed\\Desktop\\PackReport\\report.xlsx");
+//FileInputStream fileIn = new FileInputStream(src);
+//
+////Workbook workbook = new XSSFWorkbook(fileIn);
+//Workbook wb = WorkbookFactory.create(fileIn);
+//
+//System.out.println(RawData);
+
+// CreationHelper createHelper = workbook.getCreationHelper();
+//XSSFSheet sheet = (XSSFSheet) workbook.createSheet("RawData");
+//XSSFSheet sheet = (XSSFSheet) workbook.getSheetAt(0);
+// org.apache.poi.ss.usermodel.Sheet sh = wb.getSheet("Sheet1");
+
+//int noofRow = sh.getLastRowNum();
+//System.out.println(noofRow);
+//
+//Row row = sh.createRow(1);
+//Cell cell = row.createCell(0);
+//cell.setCellValue("pass");
+
+//Font headerFont = workbook.createFont();
+//headerFont.setBold(true);
+//headerFont.setFontHeightInPoints((short) 14);
+//headerFont.setColor(IndexedColors.RED.getIndex());
+//
+//CellStyle headerCellStyle = workbook.createCellStyle();
+//headerCellStyle.setFont(headerFont);
+//
+//Row headerRow = ((org.apache.poi.ss.usermodel.Sheet) sheet).createRow(0);
+//
+//for(int k = 0; k < header.length; k++) {
+//    Cell cell = headerRow.createCell(k);
+//    cell.setCellValue(header[k]);
+//    cell.setCellStyle(headerCellStyle);
+//}
+
+// Create Cell Style for formatting Date
+//CellStyle dateCellStyle = workbook.createCellStyle();
+//dateCellStyle.setDataFormat(createHelper.createDataFormat().getFormat("dd-MM-yyyy"));
+
+
+//sheet.getRow(0).createCell(0).setCellValue("12131213");
+//sheet.getRow(0).createCell(1).setCellValue("pass");
+
+//FileOutputStream fileOut = new FileOutputStream(src);
+//wb.write(fileOut);
+//fileOut.flush();
+//fileOut.close();
+
+//workbook.write(fileOut);
+//workbook.close();
+
+// Create Other rows and cells with employees data
+//int rowNum = 1;
+//for(String NewRawData: RawData) {
+//    Row row = ((org.apache.poi.ss.usermodel.Sheet) sheet).createRow(rowNum++);
+//
+//    row.createCell(0).setCellValue(NewRawData);
+
+  //.createCell(1).setCellValue(NewRawData.getEmail());
+
+//    Cell dateOfBirthCell = row.createCell(2);
+//    dateOfBirthCell.setCellValue(employee.getDateOfBirth());
+//    dateOfBirthCell.setCellStyle(dateCellStyle);
+
+ //   row.createCell(3).setCellValue(employee.getSalary());
+// }
+
+// Resize all columns to fit the content size
+//for(int k = 0; k < header.length; k++) {
+//    ((org.apache.poi.ss.usermodel.Sheet) sheet).autoSizeColumn(i);
+//}
+
+// Write the output to a file
+
+//workbook.write(fileOut);
+// fileOut.close();
+
+// Closing the workbook
+//  workbook.close();
+    
+
+//    System.out.println("Price: "+PriceMatcher.group());
+//    System.out.println("Validity: "+ValidityMatcher.group());
+    
+//    String[] data1 = { Data_VolumeMatcher.group(), PriceMatcher.group(), ValidityMatcher.group(), Bonus_PercentMatcher.group(), GP_PointsMatcher.group(), DynamicLinkMatcher.group(), String.valueOf(InternetVolume_With_Bonus_MB), SMS}; 
+//    writer.writeNext(data1);
+//    System.out.println(data1);
+
+
+//List<List<String>> rows = Arrays.asList(
+//
+//
+//Arrays.asList(InternetPacks[i][0], PriceMatcher.group(), "Java"));
+//
+//
+//FileWriter csvWriter = new FileWriter("new.csv");
+//csvWriter.append("Pack Name");
+//csvWriter.append(",");
+//csvWriter.append("Data Volume");
+//csvWriter.append(",");
+//csvWriter.append("Price");
+//csvWriter.append(",");
+//csvWriter.append("Validity");
+//csvWriter.append(",");
+//csvWriter.append("Bonus_%");
+//csvWriter.append(",");
+//csvWriter.append("GP_Points");
+//csvWriter.append(",");
+//csvWriter.append("MyGP Dynamic Link");
+//csvWriter.append(",");
+//csvWriter.append("InternetVolume With Bonus MB");
+//csvWriter.append(",");
+//csvWriter.append("SMS");
+//csvWriter.append("\n");
+//
+//for (List<String> rowData : rows) {
+//csvWriter.append(String.join(",", rowData));
+//csvWriter.append("\n");
+//}

@@ -9,53 +9,10 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">MyGP Pack Purchase</th></tr>
-<tr><td><a href="#t0">Data Pack</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">103,566</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Data Pack</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">73,593</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">MyGP Pack Purchase</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Data Pack &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Test.PackPurchase</td><td><a href="#m0">VOICE23Minutes</a></td><td rowspan="1">1571597160490</td><td rowspan="1">103536</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">MyGP Pack Purchase</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Data Pack &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Test.PackPurchase</td><td><a href="#m0">DATAEmergency30MB</a></td><td rowspan="1">1587257158664</td><td rowspan="1">71627</td></tr></tbody>
 </table>
-<h2>Data Pack</h2><h3 id="m0">Test.PackPurchase#VOICE23Minutes</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>8223</td><td>Symphony</td><td>6</td><td>0123456789ABCDEF</td><td>127.0.0.1:5001/wd/hub</td></tr><tr><th colspan="5">Exception</th></tr><tr><td colspan="5"><div class="stacktrace">org.openqa.selenium.WebDriverException: It is impossible to create a new session because &apos;createSession&apos; which takes HttpClient, InputStream and long was not found or it is not accessible
-Build info: version: &apos;3.141.5&apos;, revision: &apos;d54ebd709a&apos;, time: &apos;2018-11-06T11:42:16&apos;
-System info: host: &apos;GP-PC-5005214&apos;, ip: &apos;192.168.0.101&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_212&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:195)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:209)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:231)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:38)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:84)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:94)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:93)
-	at Test.BaseTestNG.Capabilities(BaseTestNG.java:42)
-	at Test.PackPurchase.VOICE23Minutes(PackPurchase.java:948)
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:185)
-	... 39 more
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device.
-Build info: version: &apos;3.141.5&apos;, revision: &apos;d54ebd709a&apos;, time: &apos;2018-11-06T11:42:16&apos;
-System info: host: &apos;GP-PC-5005214&apos;, ip: &apos;192.168.0.101&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_212&apos;
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device.
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:826:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:447:37)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
-	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
-	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
-	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
-	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
-	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
-	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:125)
-	... 44 more
-... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Data Pack</h2><h3 id="m0">Test.PackPurchase#DATAEmergency30MB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>8227</td><td>xaomi</td><td>8.1</td><td>b313c4</td><td>127.0.0.1:5002/wd/hub</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
