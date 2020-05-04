@@ -14,7 +14,7 @@
     <classes>
       <class name="Test.PackPurchase">
         <methods>
-          <include name="DATAEmergency30MB" invocation-numbers="0"/>
+          <include name="DATA3GB67TK" invocation-numbers="0"/>
         </methods>
       </class> <!-- Test.PackPurchase -->
     </classes>

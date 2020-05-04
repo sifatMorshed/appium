@@ -1,0 +1,5 @@
+Service class,Product Nanme,MSISDN,Product ID,Date,MA Before Purchase,MA After Purchase,Charged,DA value before purchase,DA value after purchase,DA value changed,Expected volume,Status,Activation SMS,Bonus SMS
+postpaid,6 GB + 615 MB Bonus,1713219378,,Thu Apr 30 16:26:27 BDT 2020,2474.62,2326.63,147.99,58602,69254,10652,,,,
+postpaid,108TK,1713219378,,Thu Apr 30 16:26:27 BDT 2020,2326.63,2218.63,108,69254,74581,5327,,,,
+postpaid,2 GB + 205 MB Bonus,1713219378,,Thu Apr 30 16:26:27 BDT 2020,2218.63,2164.63,54,74581,77256,2675,,,,
+postpaid,3GB_67TK,1713219378,,Thu Apr 30 16:26:27 BDT 2020,2164.63,2097.63,67,77256,81255,3999,,,,

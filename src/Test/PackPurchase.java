@@ -177,12 +177,12 @@ public class PackPurchase extends BaseTestNG {
 		                        {"Emergency 30 MB", "353", "30MB", "0 MB", "0%", "0 Tk", "3 Days", "Null", "Null"},
 		                        {"350 MB + 35 MB Bonus", "995", "350MB", "35 MB", "10%", "32.99Tk", "3 Days", "28", "mygp.li/check"},
 		                        {"1 GB +103 MB Bonus", "65", "1GB", "103 MB", "10%", "88.99Tk", "7 Days", "76", "mygp.li/check"},
-		                        {"6 GB + 615 MB Bonus", "148", "6GB", "615 MB", "10%", "147.99Tk", "7 Days", "127", "mygp.li/check"},
-		                        {"3 GB + 308 MB Bonus", "242", "3 GB", "308 MB", "10%", "108.00Tk", "7 Days", "93", "mygp.li/check"},
+		                        {"6 GB + 615 MB Bonus", "404", "6GB", "615 MB", "10%", "147.99Tk", "7 Days", "127", "mygp.li/check"},
+		                        {"108TK", "242", "3 GB", "308 MB", "10%", "108.00Tk", "7 Days", "93", "mygp.li/check"},
 		                        {"1.5 GB + 154 MB Bonus", "112", "1.5GB", "154 MB", "10%", "247.99Tk", "30 Days", "205", "mygp.li/check"},
 		                        {"2 GB + 205 MB Bonus", "992", "2GB", "205 MB", "10%", "54.00Tk", "72 Hours", "46", "mygp.li/check"},
 		                        {"1 GB +103 MB Bonus", "491", "1GB", "103 MB", "10%", "189.00Tk", "30 Days", "162", "mygp.li/check"},
-		                        {"3 GB + 308 MB Bonus", "497", "3GB", "308 MB", "10%", "288.99Tk", "30 Days", "248", "mygp.li/check"},
+		                        {" + 308 MB Bonus", "497", "3GB", "308 MB", "10%", "288.99Tk", "30 Days", "248", "mygp.li/check"},
 		                        {"5 GB + 512 MB Bonus", "500", "5GB", "512 MB", "10%", "398.99Tk", "30 Days", "342", "mygp.li/check"},
 		                        {"10 GB +1 GB Bonus", "485", "10GB", "1 GB", "10%", "197.99Tk", "7 Days", "170", "mygp.li/check"},
 		                        {"3GB(2GB +1GB 4G)", "569", "3GB", "0 MB", "0%", "62.99Tk", "72 Hours", "54", "mygp.li/check"},
@@ -203,6 +203,7 @@ public class PackPurchase extends BaseTestNG {
 		                        {"90MB Facebook Pack", "416", "86MB", "0 MB", "0%", "6.28Tk", "7 Days", "Null", "mygp.li/check"},
 		                        {"340MB Facebook Pack", "407", "340MB", "0 MB", "0%", "19Tk", "28 Days", "Null", "mygp.li/check"},
 		                        {"30GB - Become a Silver STAR", "494", "30 GB", "0 MB","0%", "998Tk", "30 Days", "857", "mygp.li/check"},
+		                        {"3GB_67TK", "680", "3 GB", "308 MB","10%", "67Tk", "3 Days", "57", "mygp.li/check"},
 		                   	   };
     
     //665 884
@@ -311,11 +312,58 @@ public class PackPurchase extends BaseTestNG {
 		  } 
 		  
 		  else {
+			  
 			  driver.findElementById("com.portonics.mygp:id/UserValidTill").click();
+			  Thread.sleep(8000);
+			  
 			  Float AccountBalanceBP = Float.valueOf(driver.findElementById("com.portonics.mygp:id/tvPostPaidAvailable").getText().replaceAll("\\D+",""));
-			  Thread.sleep(4000);
 			  Float AccountBalanceBPF = Float.valueOf(AccountBalanceBP)/100;
-			  System.out.println(AccountBalanceBPF);
+			  
+			  driver.findElementByXPath("//android.widget.TextView[@text='Internet']").click();
+			  Integer InternetVolumeBP = Integer.valueOf(driver.findElementById("com.portonics.mygp:id/UserBalance").getText().replaceAll("\\D+",""));
+			  
+			  if (platformVersion.equals("6")) {
+	        	  driver.findElementByAccessibilityId("Navigate up").click();
+	          }
+	          else {
+	        	  driver.navigate().back();
+	          }	    
+			  
+			  Map<String, Object> command = ImmutableMap.of("command", "am start -a android.intent.action.VIEW -d \"mygp://pack/internet/"+ InternetPacks[i][1] +"\" com.portonics.mygp");
+			  driver.executeScript("mobile:shell", command);
+		
+			  Thread.sleep(2000);
+			  driver.findElementByXPath("//android.widget.TextView[@text='Confirm Purchase']").click();
+			  Activity.takeGeneralScreenshot(driver, Location, 0);
+			  driver.findElementByXPath("//android.widget.TextView[@text='Go to Home']").click();
+			  Activity.takeReportedScreenshot(driver, methodName);
+			  
+			  driver.findElementById("com.portonics.mygp:id/UserInternetBalanceDetails").click();
+			  Thread.sleep(4000);
+			  Integer InternetVolumeAP = Integer.valueOf(driver.findElementById("com.portonics.mygp:id/UserBalance").getText().replaceAll("\\D+",""));
+			  int InternetVolume_With_Bonus_MB= InternetVolumeAP-InternetVolumeBP;
+			  
+			  driver.findElementByXPath("//android.widget.TextView[@text='Main Account']").click();
+			  Thread.sleep(8000);
+			  
+			  Float AccountBalanceAP = Float.valueOf(driver.findElementById("com.portonics.mygp:id/tvPostPaidAvailable").getText().replaceAll("\\D+",""));
+			  Float AccountBalanceAPF = Float.valueOf(AccountBalanceAP)/100;
+	  
+			  Float BalanceDeducted= AccountBalanceBPF-AccountBalanceAPF;
+			  Double BalanceDeductedF = Math.round(BalanceDeducted * 100.0) / 100.0;
+			  
+			  String csv = "Postpaid.csv";
+		      CSVWriter writer = new CSVWriter(new FileWriter(csv,true));
+		      
+		      String [] Reportheader = "Service class,Product Nanme,MSISDN,Product ID,Date,MA Before Purchase,MA After Purchase,Charged,DA value before purchase,DA value after purchase,DA value changed,Expected volume,Activation SMS,Bonus SMS".split(",");
+		      String [] Purchaserecord = {ServiceClass, InternetPacks[i][0], PhoneNumber, "", PurchaseTime.toString(), String.valueOf(AccountBalanceBPF), String.valueOf(AccountBalanceAPF), String.valueOf(BalanceDeductedF), String.valueOf(InternetVolumeBP), String.valueOf(InternetVolumeAP), String.valueOf(InternetVolume_With_Bonus_MB)};
+		        
+		      List<String[]> entries = new ArrayList<>();
+		   
+		      entries.add(Purchaserecord);
+		      writer.writeAll(entries);         
+		      writer.flush();
+		      writer.close();
 		  }
 
 		  
@@ -628,7 +676,7 @@ public class PackPurchase extends BaseTestNG {
 			AllPackCommonActivity Activity= new AllPackCommonActivity();
 			String methodName= new Object(){}.getClass().getEnclosingMethod().getName();
 			
-			int i = new AllPackCommonActivity().RowIndex(InternetPacks, "3 GB + 308 MB Bonus");
+			int i = new AllPackCommonActivity().RowIndex(InternetPacks, "108TK");
 			
 			String ActualSMS = "26MB Messaging Internet started successfully. Total fee 2.61Tk, valid 3 days. To check Internet balance, click mygp.li/check or dial *121*1*4#. To cancel your Internet Pack, dial *121*3041#.";
 			
@@ -1072,6 +1120,25 @@ public class PackPurchase extends BaseTestNG {
 			this.DataPackPurchaseCommonActivity(driver, methodName, platformVersion, ActualSMS, i);
 			
 			System.out.println("28th Test case is successful");
+			
+			}
+			
+			@Test(priority =29)
+			@Parameters ({"Systemport", "deviceName", "platformVersion", "UDID", "URL_"}) 	
+			public void DATA3GB67TK (String Systemport, String deviceName, String platformVersion, String UDID, String URL_) throws MalformedURLException, InterruptedException, Exception, NoSuchElementException{
+				//test = extent.createTest("AppForegroundFlexiplan");
+			
+			AndroidDriver<AndroidElement> driver = this.Capabilities(Systemport, deviceName, platformVersion, UDID, URL_);
+			AllPackCommonActivity Activity= new AllPackCommonActivity();
+			String methodName= new Object(){}.getClass().getEnclosingMethod().getName();
+			
+			int i = new AllPackCommonActivity().RowIndex(InternetPacks, "3GB_67TK");
+			
+			String ActualSMS = "26MB Messaging Internet started successfully. Total fee 2.61Tk, valid 3 days. To check Internet balance, click mygp.li/check or dial *121*1*4#. To cancel your Internet Pack, dial *121*3041#.";
+			
+			this.DataPackPurchaseCommonActivity(driver, methodName, platformVersion, ActualSMS, i);
+			
+			System.out.println("29th Test case is successful");
 			
 			}
 			
